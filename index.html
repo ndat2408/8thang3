@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chúc mừng 8/3</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<p>
+				Đã gửi đáp án của bạn! Hãy chờ kết quả từ quản trò nha <3
+			</p>
+			<p>
+				Bạn không phải làm gì cả, nó sẽ tự đóng sau <span id="time">5</span> giây
+			</p>
+
+		</div>
+	  </div>
+	<div id="load" class="modal">
+		<div class="modal-content">
+			<div class="loader"></div>
+		</div>
+	</div>
+	<div id="app">
+		<p id="title">Nhập tên đứa mà bạn đoán:</p >
+		<input id="ans" placeholder="vd: Minh" type="text" maxlength="15"> 
+		<button>Gửi</button>
+	</div>
+</body>
+<script src="main.js"></script>
+<script type="module" src="firebase.js"></script>
+</html>

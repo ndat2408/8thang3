@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    color: #fff;
+    background: #a73737;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7a2828, #a73737);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7a2828, #a73737); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+}
+
+#app{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+#app #title{
+    font-size: 5.8vw;
+}
+
+#app input{
+    position: relative;
+    margin: 10px 0;
+    outline: none;
+    border: 2px solid #D1913C;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border-radius: 28px;
+}
+
+#app button{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    background:#D1913C;
+    border: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+#app button:active{
+    scale: 0.85;
+}
+
+.modal {
+    color: #000;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 85%; /* Could be more or less, depending on screen size */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.block{
+    display: block !important;
+}
+
+#load .modal-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: none;
+    border: none;
+}
+
+.loader {
+    border: 12px solid #a73737; /* Light grey */
+    border-top: 12px solid #D1913C; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
