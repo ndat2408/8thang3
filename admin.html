@@ -12,29 +12,4 @@
 
     </div>
 </body>
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
-	const firebaseConfig = {
-	  apiKey: "AIzaSyCxmgkXObHDb4xbx3cdd8LxpSsGmp6UBSg",  
-	  authDomain: "project-7147797804174265420.firebaseapp.com",  
-	  databaseURL: "https://project-7147797804174265420-default-rtdb.firebaseio.com",  
-	  projectId: "project-7147797804174265420",
-	  storageBucket: "project-7147797804174265420.appspot.com",
-	  messagingSenderId: "1060781177419",
-	  appId: "1:1060781177419:web:56356bfe90647b5fb86bce"
-	};
-	const app = initializeApp(firebaseConfig);
-	import {getDatabase,get, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
-	const db = getDatabase()
-    document.querySelector("#showall").onclick = function(){
-        const dbref = ref(db);
-        get(child(dbref,"/traloi/")).then((snapshot)=>{
-            if (snapshot.exist()){
-                document.querySelector("#dapan").innerHTML += snapshot.val().dapan
-            }
-        })
-    }
-    
-    
-</script>
 </html>
